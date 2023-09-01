@@ -7,6 +7,37 @@
 @media (max-width: 991.98px) {
 }
 @media (max-width: 768px) {
+  nav {
+    .nav__toggler {
+      display: block;
+    }
+    .nav__menu {
+      position: fixed;
+      top: 7vh;
+      right: 0;
+      width: 50%;
+      height: 100vh;
+      background: rgb(35, 1, 138);
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transform: translateX(100%);
+      transition: 0.2s ease-in;
+    }
+    .nav__active {
+      transform: translateX(0);
+    }
+
+    .toggle .line1{
+      transform: rotate(-45deg) translate(-3px, 5px);
+    }
+    .toggle .line2{
+      opacity: 0;
+    }
+    .toggle .line3{
+      transform: rotate(45deg) translate(-1px, -5px);
+    }
+  }
 }
 @media (max-width: 590px) {
 }
