@@ -1,0 +1,48 @@
+.card-container {
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.5s;
+  animation: ease-in-out;
+  background-color: white;
+  border-radius: 17px;
+  max-width: 28rem;
+  &hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px;
+  }
+  .image-container {
+    img {
+      overflow: hidden;
+      object-fit: cover;
+      // height: 200px;
+      width: 100%;
+      max-height: 200px;
+    }
+  }
+
+  .card-content {
+    margin: 1rem;
+    margin-top: 0.5rem;
+    .card-title {
+      margin-bottom: 0.5rem;
+    }
+    .card-description {
+      max-width: 200px;
+      line-height: 1.2em;
+      height: 3.6em;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    .card-btn{
+      margin-top: 20px;
+    }
+    h3,
+    p {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.btn-wrapper {
+}
+
+.btn-footer {
+  background-color: var(--page-color);
+  color: var(--text-color);
+  &:hover {
+    background-color: var( --select-color) !important;
+    color: white;
+  }
+}
+
+
+.btn-Card {
+  background-color: var(--select-color);
+  color: white;
+  &:hover {
+    background-color: var( --page-color) !important;
+    color: var(--text-color);
+  }
+}

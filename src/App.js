@@ -1,11 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import MainLayout from "./Layouts/main";
 import "./Assets/Style/index.scss"
+import Routing from "./Components/Routing";
+import Router from "./Router";
+
 
 function App() {
   return (
     <div className="App">
-      <MainLayout/>
+      <Routing routes={Router} />
     </div>
   );
 }

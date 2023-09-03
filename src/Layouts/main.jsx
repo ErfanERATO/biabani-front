@@ -1,10 +1,14 @@
 import React from "react";
+import "./style.scss";
 import CustomHeader from "../Components/Header";
+import CustomFooter from "../Components/Footer";
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
   return (
-    <div>
+    <div className="page-wrapper">
       <CustomHeader />
+      <div className="main-content">{children}</div>
+      <CustomFooter />
     </div>
   );
 };

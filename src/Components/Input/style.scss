@@ -1,0 +1,30 @@
+.input-wrapper {
+    display: flex;
+    background-color: var(--white);
+    border: 1px solid #cdcccf;
+    border-radius: 15px;
+    padding: 6px;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    margin-bottom: 10px;
+    .icon-input {
+      border-left: 1px solid #cdcccf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 5px;
+      margin-left: 5px;
+    }
+    input {
+      border: none;
+      background-color: transparent;
+      color: #333333;
+      flex: 1;
+      width: 100%;
+      padding: 6px 4px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  

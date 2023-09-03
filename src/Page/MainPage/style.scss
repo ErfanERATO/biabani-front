@@ -1,0 +1,39 @@
+.search-form {
+  // display: flex;
+  // flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+
+  .box {
+    background-color: var(--select-color);
+  }
+  .user-inputs {
+    p {
+      max-width: 500px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+h4 {
+  color: var(--text-color) !important;
+  font-weight: 700;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url("../../Assets//Image/digonal-ddddtransformed.png");
+    width: 188px;
+    height: auto;
+    position: absolute;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -10px;
+    transform: translatex(88px);
+  }
+}
