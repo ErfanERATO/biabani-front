@@ -4,18 +4,32 @@
 .btn-footer {
   background-color: var(--page-color);
   color: var(--text-color);
+  border: none;
   &:hover {
-    background-color: var( --select-color) !important;
+    background-color: var(--select-color) !important;
     color: white;
+    border: none;
   }
 }
-
 
 .btn-Card {
   background-color: var(--select-color);
   color: white;
+  font-weight: 500;
+  border: none;
   &:hover {
-    background-color: var( --page-color) !important;
+    background-color: var(--page-color) !important;
     color: var(--text-color);
+    border: none;
+  }
+}
+
+.confirm-btn {
+  background-color: var(--select-color);
+  color: white;
+  &:hover {
+    background-color: var(--page-color) !important;
+    color: var(--text-color);
+    border: none;
   }
 }

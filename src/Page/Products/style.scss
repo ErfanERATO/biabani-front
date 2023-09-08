@@ -1,0 +1,65 @@
+.card-wrapper {
+  flex-wrap: wrap;
+
+  .search-form {
+    display: flex;
+    gap: 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    white-space: nowrap;
+    > * {
+      &:nth-child(1) {
+        flex: 1 0 100px !important;
+        min-width: 250px !important;
+      }
+      &:nth-child(2) {
+        flex: 1 0 200px !important;
+      }
+
+      &:nth-child(3) {
+        flex: 1 0 200px !important;
+        min-width: 250px !important;
+      }
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      label {
+        white-space: nowrap;
+      }
+      input,
+      select {
+        flex-grow: 1;
+        background-color: rgba(24, 31, 121, 0.05);
+      }
+      &:last-child {
+        justify-content: flex-end;
+      }
+    }
+    input {
+      padding: 0px 20px 0px 100px;
+    }
+  }
+
+  .page-title {
+    margin-bottom: 50px;
+    h4 {
+      color: var(--text-color) !important;
+      font-weight: 700;
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url("../../Assets//Image/digonal-ddddtransformed.png");
+        width: 188px;
+        height: auto;
+        position: absolute;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -10px;
+        transform: translatex(120px);
+      }
+    }
+  }
+}

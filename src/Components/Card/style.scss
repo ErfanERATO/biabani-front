@@ -6,7 +6,7 @@
   background-color: white;
   border-radius: 17px;
   max-width: 28rem;
-  &hover {
+  &::hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 15px 0px;
   }
@@ -25,6 +25,16 @@
     margin-top: 0.5rem;
     .card-title {
       margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    .card-category{
+      p{
+        margin: 0px;
+        font-weight: 600;
+        padding-bottom: 20px;
+        color: var(--select-color);
+      }
     }
     .card-description {
       max-width: 200px;
@@ -34,6 +44,8 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
+      font-weight: 500;
+      color: var(--text-color);
     }
 
     .card-btn{

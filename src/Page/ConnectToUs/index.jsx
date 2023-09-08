@@ -12,8 +12,8 @@ const ConnectToUs = () => {
           </div>
         </div>
       </div>
-      <div className="location-text d-flex justify-content-between">
-        <div className="text-side-map">
+      <div className="row location-text d-flex justify-content-between">
+        <div className="col-md-6 text-side-map">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             quidem incidunt ipsum dignissimos, quasi velit, nobis repellat quia
@@ -29,7 +29,7 @@ const ConnectToUs = () => {
           </p>
         </div>
 
-        <div className="map-connect-us">
+        <div className="col-md-6 map-connect-us">
           <div className="location">
             <MapContainer
               center={[51.505, -0.09]}

@@ -8,17 +8,17 @@
   // bottom: 0;
   // right: 0;
   // padding: 20px;
-  &::before {
-    content: "";
-    background-image: url("../../Assets//Image/pattern.png");
-    width: 850px;
-    position: absolute;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: -200px;
-    top: -75px;
-  }
+  // &::before {
+  //   content: "";
+  //   background-image: url("../../Assets//Image/pattern.png");
+  //   width: 850px;
+  //   position: absolute;
+  //   height: 600px;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   right: 100px;
+  //   top: -75px;
+  // }
 
   .footer-links {
     display: flex;

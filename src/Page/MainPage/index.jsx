@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import CustomInput from "../../Components/Input/index";
 import { CiSearch } from "react-icons/ci";
+import Slider from "../../Components/Swiper/index";
 
 const MainPage = () => {
   return (
@@ -29,6 +30,27 @@ const MainPage = () => {
               cumque temporibus voluptatibus aspernatur non veniam illo,
               consequuntur rerum officiis id mollitia neque incidunt.
             </p>
+          </div>
+
+          <div className="home-slider-section d-flex align-items-center justify-content-center pt-3">
+            <Slider
+              props={{ autoplay: true }}
+              data={[
+                {
+                  src: require("../../Assets/Image/Music_Icon.jpg"),
+                },
+                {
+                  src: require("../../Assets/Image/Music_Icon.jpg"),
+                },
+              ]}
+              renderItem={(item, key) => {
+                return (
+                  <div key={key} className="home-slider">
+                    <img src={item.src} style={{}} />
+                  </div>
+                );
+              }}
+            />
           </div>
         </form>
       </div>

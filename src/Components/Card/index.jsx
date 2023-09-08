@@ -1,11 +1,21 @@
 import React from "react";
 import "./style.scss";
 import Image from "../../Assets/Image/Music_Icon.jpg";
-import CustomBtn from "../Btn/index"
+import CustomBtn from "../Btn/index";
+import CustomModal from "../Modal";
+import { Link, useNavigate } from "react-router-dom";
 
-const CustomCard = ({ title, text, loading, icon }) => {
+const CustomCard = ({
+  title,
+  text,
+  loading,
+  icon,
+  category,
+  method = () => {},
+}) => {
+
   return (
-    <div className="card-container">
+    <div className="card-container" onClick={method}>
       <div className="image-container">
         <img src={Image} alt="" />
       </div>
@@ -27,6 +37,25 @@ const CustomCard = ({ title, text, loading, icon }) => {
             )}
           </h3>
         </div>
+
+        <div className="card-category">
+          <p>
+            {loading ? (
+              <></>
+            ) : typeof category == "string" ? (
+              <>
+                {category}
+                {icon && icon()}
+              </>
+            ) : (
+              <>
+                {category()}
+                {icon && icon()}
+              </>
+            )}
+          </p>
+        </div>
+
         <div className="card-description">
           {loading ? (
             <></>
@@ -42,11 +71,12 @@ const CustomCard = ({ title, text, loading, icon }) => {
             </>
           )}
         </div>
+
         <div className="card-btn">
-          <CustomBtn
+          {/* <CustomBtn
             className="btn-Card"
-            text="محصولات"
-          />
+            text="مشاهده"
+          /> */}
         </div>
       </div>
     </div>
