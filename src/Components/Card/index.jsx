@@ -74,10 +74,6 @@ const CustomCard = ({
 
         <div className="card-btn">
           {btn && btn()}
-          {/* <CustomBtn
-            className="btn-Card"
-            text="مشاهده"
-          /> */}
         </div>
       </div>
     </div>

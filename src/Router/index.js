@@ -2,7 +2,7 @@ import MainLayout from "../Layouts/main";
 import ConnectToUs from "../Page/ConnectToUs";
 import MainPage from "../Page/MainPage/index"
 import ProductPage from "../Page/Products/list";
-import SingleProduct from "../Page/SingleProduct";
+// import SingleProduct from "../Page/SingleProduct";
 
 export default [
   {
@@ -20,10 +20,10 @@ export default [
     component: ConnectToUs,
     layout: MainLayout,
   },
-  {
-    path: "/product/:slug",
-    component: SingleProduct,
-    layout: MainLayout,
-  },
+  // {
+  //   path: "/product/:slug",
+  //   component: SingleProduct,
+  //   layout: MainLayout,
+  // },
 
 ];

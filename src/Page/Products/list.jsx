@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 import CustomCard from "../../Components/Card";
 import { useProductList, useSingleProduct } from "./hooks/useProductList";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import CustomInput from "../../Components/Input/index";
 import { CiSearch } from "react-icons/ci";
 import Form from "react-bootstrap/Form";
 import CustomBtn from "../../Components/Btn";
 import { useUrl } from "../../hooks/useUrl";
 import Modal from "react-bootstrap/Modal";
+import Paginate from "../../Components/Pagination";
 
 const ProductPage = () => {
   // const navigate = useNavigate();
@@ -70,9 +71,6 @@ const ProductPage = () => {
               style={{ paddingTop: "30px" }}
             >
               <CustomCard
-                image={
-                  <img src={elements.photos?.url} alt={elements.photos?.alt} />
-                }
                 title={elements.title}
                 category={elements.category?.title}
                 text={elements.s_desc}
@@ -89,7 +87,15 @@ const ProductPage = () => {
             </div>
           );
         })}
+        <div style={{paddingTop:"30px"}}>
+          <Paginate
+            active={productsData?.current_page}
+            limit={productsData?.per_page || 5}
+            total={productsData?.last_page}
+          />
+        </div>
       </div>
+
       <SingleModel data={showModal} onHide={() => setShowModal(null)} />
     </div>
   );
@@ -97,23 +103,20 @@ const ProductPage = () => {
 
 export default ProductPage;
 
-export const SingleModel = ({ data={}, onHide }) => {
+export const SingleModel = ({ data = {}, onHide }) => {
   const { loading, productsData, getProduct } = useSingleProduct();
   useEffect(() => {
-    if(data?.slug)
-    getProduct(data?.slug);
+    if (data?.slug) getProduct(data?.slug);
   }, [data]);
-  console.log('asdasdasdasd',productsData)
-  if (loading) return <div>asdasdasd</div>;
   return (
-    <div>
+    <div className="single-modal">
       <Modal show={data} fullscreen={"md-down"} onHide={onHide}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <h1>{productsData?.title}</h1>
-          <p>{productsData?.category?.title}</p>
-          <p>{productsData?.price}</p>
-          <p>{productsData?.l_desc}</p>
+          <h6>{productsData?.category?.title}</h6>
+          <p className="desc">{productsData?.l_desc}</p>
+          <p className="price">{productsData?.price} تومان</p>
         </Modal.Body>
       </Modal>
     </div>

@@ -5,13 +5,13 @@ import { useSingle } from "./Hooks";
 // import { useSingle } from "./Hooks";
 
 const CustomModal = ({ data = null, onHide }) => {
-  const [fullscreen, setFullscreen] = useState(true);
-  const [show, setShow] = useState(false);
+  // const [fullscreen, setFullscreen] = useState(true);
+  // const [show, setShow] = useState(false);
   const { single, loading ,getData} = useSingle();
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
-    setShow(true);
-  }
+  // function handleShow(breakpoint) {
+  //   setFullscreen(breakpoint);
+  //   setShow(true);
+  // }
   useEffect(() => {
     getData(data?.slug);
   }, []);

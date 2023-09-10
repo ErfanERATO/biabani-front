@@ -40,6 +40,9 @@ export const useProductList = () => {
     productsData,
   };
 };
+
+
+
 export const useSingleProduct = () => {
   const [loading, setLoading] = useState(true);
   const [productsData, setProductsData] = useState({});
@@ -49,7 +52,7 @@ export const useSingleProduct = () => {
       const { data } = await Api.get(`/site/product/`+slug);
       setProductsData(data?.data);
       setLoading(false);
-      console.log(data.data, "mother fucker");
+      console.log(data.data, "modal fucker");
     } catch (e) {
       console.log(e, "123143425");
     } finally {

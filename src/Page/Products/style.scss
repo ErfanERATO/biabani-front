@@ -63,3 +63,31 @@
     }
   }
 }
+
+.modal-dialog {
+  .modal-content {
+    padding: 20px;
+    .modal-body {
+      h1 {
+        color: var(--select-text);
+      }
+      h6 {
+        color: var(--select-text);
+        font-weight: 600;
+      }
+      p {
+        color: var(--select-text);
+      }
+      .desc{
+        padding-top: 30px;
+      }
+      .price{
+        color: var(--select-color);
+        font-weight: 700;
+        font-size: 30px;
+        padding-top: 30px;
+      }
+
+    }
+  }
+}
