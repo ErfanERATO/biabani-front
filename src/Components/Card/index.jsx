@@ -11,9 +11,9 @@ const CustomCard = ({
   loading,
   icon,
   category,
+  btn,
   method = () => {},
 }) => {
-
   return (
     <div className="card-container" onClick={method}>
       <div className="image-container">
@@ -73,6 +73,7 @@ const CustomCard = ({
         </div>
 
         <div className="card-btn">
+          {btn && btn()}
           {/* <CustomBtn
             className="btn-Card"
             text="مشاهده"

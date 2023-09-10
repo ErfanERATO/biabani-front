@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./style.scss";
-const CustomInput = ({ icon, props = {}, placeholder, value = "", errors }) => {
+const CustomInput = ({
+  icon,
+  placeholder,
+  value = "",
+  errors,
+  ...resProps
+}) => {
   const [style, setStyle] = useState({});
 
   return (
@@ -15,7 +21,8 @@ const CustomInput = ({ icon, props = {}, placeholder, value = "", errors }) => {
           onBlur={() => {
             setStyle({});
           }}
-          {...props}
+          value={value}
+          {...resProps}
         />
       </div>
       {errors ? <p className="text-danger fs-14">{errors.message}</p> : <></>}

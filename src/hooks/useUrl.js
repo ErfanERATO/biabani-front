@@ -24,5 +24,13 @@ export const useUrl = () => {
     navigate(options, { replace: true });
   };
 
-  return { addToQuery };
+  const SearchParamsList = () => {
+    let params = {};
+    searchParams.forEach((value, key) => {
+      params[key] = value;
+    });
+    return params;
+  };
+
+  return { addToQuery, SearchParamsList };
 };
