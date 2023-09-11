@@ -6,7 +6,7 @@
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
     padding: 20px 15px;
     white-space: nowrap;
     > * {
@@ -67,27 +67,38 @@
 .modal-dialog {
   .modal-content {
     padding: 20px;
-    .modal-body {
+    .modal-header {
       h1 {
-        color: var(--select-text);
+        color: var(--text-color);
       }
       h6 {
-        color: var(--select-text);
+        color: var(--select-color);
         font-weight: 600;
       }
-      p {
-        color: var(--select-text);
+    }
+    .modal-body {
+      .image-container {
+        img {
+          overflow: hidden;
+          object-fit: cover;
+          // height: 200px;
+          width: 100%;
+          max-height: 300px;
+        }
       }
-      .desc{
+
+      p {
+        color: var(--text-color);
+      }
+      .desc {
         padding-top: 30px;
       }
-      .price{
+      .price {
         color: var(--select-color);
         font-weight: 700;
         font-size: 30px;
         padding-top: 30px;
       }
-
     }
   }
 }

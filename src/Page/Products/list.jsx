@@ -33,12 +33,12 @@ const ProductPage = () => {
           </div>
 
           <form className="search-form">
-            <div>
+            <div style={{ paddingTop: "7px" }}>
               <CustomInput
                 value={searchParams.get("search")}
                 onChange={(e) => addToQuery("search", e.target.value)}
                 icon={<CiSearch style={{ fontSize: "20px" }} />}
-                placeholder="نام محصول را وارد نمایید"
+                placeholder="جست‌و‌جو"
               />
             </div>
 
@@ -57,7 +57,7 @@ const ProductPage = () => {
               </Form.Select>
             </div>
 
-            <CustomBtn type="button" text="تایید" className="confirm-btn" />
+            <CustomBtn type="button" text="یافتن" className="confirm-btn" />
           </form>
         </div>
       </div>
@@ -66,11 +66,12 @@ const ProductPage = () => {
         {productsData.data?.map((elements, key) => {
           return (
             <div
-              className="col-12 col-sm-12 col-md-3"
+              className="col-12 col-sm-4 col-md-3 d-flex justify-content-center"
               key={key}
               style={{ paddingTop: "30px" }}
             >
               <CustomCard
+                image={() => <img src={elements.photos?.[0]?.url} />}
                 title={elements.title}
                 category={elements.category?.title}
                 text={elements.s_desc}
@@ -78,7 +79,7 @@ const ProductPage = () => {
                 btn={() => (
                   <CustomBtn
                     onClick={() => setShowModal(elements)}
-                    text={"مشاهده"}
+                    text="مشاهده"
                     className="btn-Card"
                   />
                   // <button onClick={() => setModalData(elements)}>مشاهده</button>
@@ -87,7 +88,7 @@ const ProductPage = () => {
             </div>
           );
         })}
-        <div style={{paddingTop:"30px"}}>
+        <div style={{ paddingTop: "30px" }}>
           <Paginate
             active={productsData?.current_page}
             limit={productsData?.per_page || 5}
@@ -111,10 +112,16 @@ export const SingleModel = ({ data = {}, onHide }) => {
   return (
     <div className="single-modal">
       <Modal show={data} fullscreen={"md-down"} onHide={onHide}>
-        <Modal.Header closeButton></Modal.Header>
+        <Modal.Header closeButton>
+          <div>
+            <h1>{productsData?.title}</h1>
+            <h6>{productsData?.category?.title}</h6>
+          </div>
+        </Modal.Header>
         <Modal.Body>
-          <h1>{productsData?.title}</h1>
-          <h6>{productsData?.category?.title}</h6>
+          <div className="image-container">
+            <img src={productsData?.photos?.[0]?.url} />
+          </div>
           <p className="desc">{productsData?.l_desc}</p>
           <p className="price">{productsData?.price} تومان</p>
         </Modal.Body>

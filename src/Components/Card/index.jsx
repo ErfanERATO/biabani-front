@@ -1,9 +1,5 @@
 import React from "react";
 import "./style.scss";
-import Image from "../../Assets/Image/Music_Icon.jpg";
-import CustomBtn from "../Btn/index";
-import CustomModal from "../Modal";
-import { Link, useNavigate } from "react-router-dom";
 
 const CustomCard = ({
   title,
@@ -12,13 +8,13 @@ const CustomCard = ({
   icon,
   category,
   btn,
+  image,
   method = () => {},
 }) => {
+  console.log("__tt", text);
   return (
     <div className="card-container" onClick={method}>
-      <div className="image-container">
-        <img src={Image} alt="" />
-      </div>
+      <div className="image-container">{image && image()}</div>
       <div className="card-content">
         <div className="card-title">
           <h3>
@@ -59,6 +55,8 @@ const CustomCard = ({
         <div className="card-description">
           {loading ? (
             <></>
+          ) : !text ? (
+            <></>
           ) : typeof text == "string" ? (
             <>
               {text}
@@ -72,9 +70,7 @@ const CustomCard = ({
           )}
         </div>
 
-        <div className="card-btn">
-          {btn && btn()}
-        </div>
+        <div className="card-btn">{btn && btn()}</div>
       </div>
     </div>
   );

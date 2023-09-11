@@ -27,6 +27,8 @@
 .confirm-btn {
   background-color: var(--select-color);
   color: white;
+  min-width: 130px;
+ 
   &:hover {
     background-color: var(--page-color) !important;
     color: var(--text-color);

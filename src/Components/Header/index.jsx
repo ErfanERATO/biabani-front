@@ -45,6 +45,7 @@ const CustomHeader = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+            <Nav.Link href="/">خانه</Nav.Link>
             <Nav.Link href="/products">محصولات</Nav.Link>
             <Nav.Link href="/connect-us">درباره‌ی ما</Nav.Link>
           </Nav>

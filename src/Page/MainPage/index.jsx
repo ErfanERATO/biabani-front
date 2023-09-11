@@ -18,9 +18,7 @@ const MainPage = () => {
         <form className="user-inputs">
           <CustomInput
             icon={<CiSearch style={{ fontSize: "20px" }} />}
-            props={{
-              placeholder: "نام محصول را وارد نمایید",
-            }}
+            placeholder="کد محصول را وارد نمایید"
           />
 
           <div className="d-flex align-items-center justify-content-center pt-3">
@@ -36,6 +34,18 @@ const MainPage = () => {
             <Slider
               props={{ autoplay: true }}
               data={[
+                {
+                  src: require("../../Assets/Image/Music_Icon.jpg"),
+                },
+                {
+                  src: require("../../Assets/Image/Music_Icon.jpg"),
+                },
+                {
+                  src: require("../../Assets/Image/Music_Icon.jpg"),
+                },
+                {
+                  src: require("../../Assets/Image/Music_Icon.jpg"),
+                },
                 {
                   src: require("../../Assets/Image/Music_Icon.jpg"),
                 },
